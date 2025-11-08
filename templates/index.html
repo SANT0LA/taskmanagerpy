@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="{{ url_for('create_task') }}" method="post" class="mb-4">
+  <div class="row g-2">
+    <div class="col-md-4"><input name="title" class="form-control" placeholder="Título" required></div>
+    <div class="col-md-4"><input name="priority" class="form-control" placeholder="prioridade (low|medium|high)"></div>
+    <div class="col-md-4"><button class="btn btn-primary">Adicionar</button></div>
+  </div>
+</form>
+
+<table class="table table-striped">
+  <thead><tr><th>Título</th><th>Prioridade</th><th>Status</th><th>Ações</th></tr></thead>
+  <tbody>
+    {% for t in tasks %}
+    <tr>
+      <td>{{ t.title }}</td>
+      <td>{{ t.priority }}</td>
+      <td>{{ t.status }}</td>
+      <td>
+        <a class="btn btn-sm btn-secondary" href="{{ url_for('edit_task', task_id=t.id) }}">Editar</a>
+        <form action="{{ url_for('delete_task', task_id=t.id) }}" method="post" style="display:inline">
+          <button class="btn btn-sm btn-danger">Excluir</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="" method="post">
+  <div class="mb-3"><input name="title" class="form-control" value="{{ task.title }}" required></div>
+  <div class="mb-3"><textarea name="description" class="form-control">{{ task.description }}</textarea></div>
+  <div class="mb-3">
+    <select name="priority" class="form-select">
+      <option value="low" {% if task.priority=='low' %}selected{% endif %}>Low</option>
+      <option value="medium" {% if task.priority=='medium' %}selected{% endif %}>Medium</option>
+      <option value="high" {% if task.priority=='high' %}selected{% endif %}>High</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <select name="status" class="form-select">
+      <option value="pending" {% if task.status=='pending' %}selected{% endif %}>Pending</option>
+      <option value="doing" {% if task.status=='doing' %}selected{% endif %}>Doing</option>
+      <option value="done" {% if task.status=='done' %}selected{% endif %}>Done</option>
+    </select>
+  </div>
+  <button class="btn btn-primary">Salvar</button>
+  <a class="btn btn-secondary" href="{{ url_for('index') }}">Cancelar</a>
+</form>
+{% endblock %}
