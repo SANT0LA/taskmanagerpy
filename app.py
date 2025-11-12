@@ -74,3 +74,46 @@ def delete_task(task_id):
 def api_list_tasks():
     tasks = Task.query.all()
     return jsonify([t.to_dict() for t in tasks])
+
+# ===============================
+# 📊 ROTA DE ESTATÍSTICAS
+# ===============================
+from sqlalchemy import func
+
+@app.route("/stats")
+def stats():
+    total = Task.query.count()
+    done = Task.query.filter_by(status="done").count()
+    doing = Task.query.filter_by(status="doing").count()
+    pending = Task.query.filter_by(status="pending").count()
+
+    percent_done = (done / total * 100) if total > 0 else 0
+
+    # Converter prioridade em valores numéricos
+    priority_map = {"low": 1, "medium": 2, "high": 3}
+    tasks = Task.query.all()
+    if tasks:
+        avg_priority = sum(priority_map.get(t.priority, 0) for t in tasks) / len(tasks)
+    else:
+        avg_priority = 0
+
+    # Tarefas criadas por dia (agregação SQL)
+    daily_counts = (
+        db.session.query(func.date(Task.created_at), func.count(Task.id))
+        .group_by(func.date(Task.created_at))
+        .all()
+    )
+
+    return render_template(
+        "stats.html",
+        total=total,
+        done=done,
+        doing=doing,
+        pending=pending,
+        percent_done=percent_done,
+        avg_priority=avg_priority,
+        daily_counts=daily_counts
+    )
+
+if __name__ == "__main__":
+    app.run(debug=True)

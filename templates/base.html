@@ -8,6 +8,11 @@
 <body class="p-4">
   <div class="container">
     <h1 class="mb-4">TaskManagerPy</h1>
+    <div class="mb-3">
+  <a href="{{ url_for('index') }}" class="btn btn-outline-primary btn-sm">Tarefas</a>
+  <a href="{{ url_for('stats') }}" class="btn btn-outline-success btn-sm">Estatísticas</a>
+</div>
+
     {% block content %}{% endblock %}
   </div>
 </body>
