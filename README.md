@@ -87,7 +87,8 @@ python app.py
 Acesse no navegador:
 👉 http://127.0.0.1:5000/
 
-📊 Estatísticas e Visualização
+```
+## 📊 Estatísticas e Visualização
 
 A página /stats exibe indicadores em tempo real, incluindo:
 
@@ -101,7 +102,7 @@ Gráfico interativo de tarefas criadas por dia
 
 Implementação feita com SQLAlchemy + Chart.js, demonstrando técnicas de agregação de dados e visualização estatística.
 
-🧮 Análise de Algoritmos e Complexidade
+## 🧮 Análise de Algoritmos e Complexidade
 
 O documento analysis.md
  apresenta:
@@ -116,7 +117,7 @@ Equação de recorrência do QuickSort
 
 Tabela comparativa das operações CRUD
 
-📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 taskmanagerpy/
 │
 ├── app.py                 # Arquivo principal Flask
@@ -132,14 +133,12 @@ taskmanagerpy/
     ├── edit.html
     └── stats.html
 
-🧾 Licença
+## 🧾 Licença
 
 Este projeto foi desenvolvido com fins acadêmicos por João Victor Santos
 para a disciplina Algoritmos e Complexidades(2025).
 Uso livre para fins educacionais.
 
-👨‍💻 Autor
-
+## 👨‍💻 Autor
 João Victor Santos
-
 🔗 GitHub - SANT0LA
