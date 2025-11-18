@@ -1,11 +1,11 @@
-# ✅ TaskManagerPy  
+# TaskManager  
 **Gerenciador de Tarefas Web desenvolvido em Python (Flask)**  
 
 ---
 
-## 🧩 Sobre o Projeto
+## Sobre o Projeto
 
-O **TaskManagerPy** é uma aplicação web desenvolvida em **Python** com o framework **Flask**, criada para **gerenciar tarefas pessoais**.  
+O **TaskManager** é uma aplicação web desenvolvida em **Python** com o framework **Flask**, criada para **gerenciar tarefas pessoais**.  
 O sistema permite **criar, listar, editar e excluir tarefas**, além de **analisar estatísticas** e **gerar gráficos** sobre o progresso do usuário.
 
 Este projeto foi desenvolvido como parte da disciplina **Algoritmos e Complexidades em Aplicações Web/Mobile**, aplicando conceitos de:
@@ -16,7 +16,7 @@ Este projeto foi desenvolvido como parte da disciplina **Algoritmos e Complexida
 
 ---
 
-## ⚙️ Funcionalidades Principais
+## Funcionalidades Principais
 
 | Função | Descrição |
 |---------|------------|
@@ -30,7 +30,7 @@ Este projeto foi desenvolvido como parte da disciplina **Algoritmos e Complexida
 
 ---
 
-## 🧠 Algoritmos e Estruturas
+##  Algoritmos e Estruturas
 
 O projeto implementa e analisa:
 
@@ -46,7 +46,7 @@ Mais detalhes sobre a análise teórica estão disponíveis no arquivo [`analysi
 
 ---
 
-## 🧱 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Python 3.12+**
 - **Flask** — framework web principal  
@@ -58,7 +58,7 @@ Mais detalhes sobre a análise teórica estão disponíveis no arquivo [`analysi
 
 ---
 
-## 🚀 Deploy Online
+## Deploy Online
 
 A aplicação está hospedada na **Railway** e pode ser acessada em:
 
@@ -88,21 +88,8 @@ Acesse no navegador:
 👉 http://127.0.0.1:5000/
 
 ```
-## 📊 Estatísticas e Visualização
 
-A página /stats exibe indicadores em tempo real, incluindo:
-
-Total de tarefas criadas
-
-Percentual de tarefas concluídas
-
-Média de prioridade (1–3)
-
-Gráfico interativo de tarefas criadas por dia
-
-Implementação feita com SQLAlchemy + Chart.js, demonstrando técnicas de agregação de dados e visualização estatística.
-
-## 🧮 Análise de Algoritmos e Complexidade
+##  Análise de Algoritmos e Complexidade
 
 O documento analysis.md
  apresenta:
@@ -117,7 +104,7 @@ Equação de recorrência do QuickSort
 
 Tabela comparativa das operações CRUD
 
-## 📂 Estrutura do Projeto
+##  Estrutura do Projeto
 taskmanagerpy/
 │
 ├── app.py                 # Arquivo principal Flask
@@ -132,13 +119,3 @@ taskmanagerpy/
     ├── index.html
     ├── edit.html
     └── stats.html
-
-## 🧾 Licença
-
-Este projeto foi desenvolvido com fins acadêmicos por João Victor Santos
-para a disciplina Algoritmos e Complexidades(2025).
-Uso livre para fins educacionais.
-
-## 👨‍💻 Autor
-João Victor Santos
-🔗 GitHub - SANT0LA

@@ -40,87 +40,88 @@ def quicksort_tasks(tasks, key_func):
     middle = [t for t in tasks if key_func(t) == pivot_key]
     right = [t for t in tasks if key_func(t) < pivot_key]
     return quicksort_tasks(left, key_func) + middle + quicksort_tasks(right, key_func)
-    Complexidade:
+````
+Complexidade:
     Caso	Custo
     Melhor caso	O(n log n)
     Caso médio	O(n log n)
     Pior caso	O(n²)
 
-    O QuickSort foi escolhido por ser eficiente na prática, simples de implementar recursivamente e aplicar diretamente sobre listas Python.
+O QuickSort foi escolhido por ser eficiente na prática, simples de implementar recursivamente e aplicar diretamente sobre listas Python.
 
-    🔍 b) Busca Linear (Localizar tarefas por ID)
+🔍 b) Busca Linear (Localizar tarefas por ID)
 
-    A busca linear é usada implicitamente ao editar, excluir ou atualizar tarefas.
-    O algoritmo percorre a lista até encontrar o item correspondente.
+A busca linear é usada implicitamente ao editar, excluir ou atualizar tarefas.
+O algoritmo percorre a lista até encontrar o item correspondente.
 
-    Complexidade:
+Complexidade:
 
-    O(n) no pior caso.
+O(n) no pior caso.
 
-    ➕ c) Cálculos Estatísticos e Agregações
+➕ c) Cálculos Estatísticos e Agregações
 
-    O sistema realiza cálculos agregados e estatísticos para gerar indicadores de produtividade e eficiência.
+O sistema realiza cálculos agregados e estatísticos para gerar indicadores de produtividade e eficiência.
 
-    Métricas calculadas:
+Métricas calculadas:
 
-    Total de tarefas
+Total de tarefas
 
-    Quantidade e porcentagem de tarefas concluídas
+Quantidade e porcentagem de tarefas concluídas
 
-    Média de prioridade (conversão: low = 1, medium = 2, high = 3)
+Média de prioridade (conversão: low = 1, medium = 2, high = 3)
 
-    Agrupamento de tarefas por data (GROUP BY no SQLAlchemy)
+Agrupamento de tarefas por data (GROUP BY no SQLAlchemy)
 
-    Complexidade:
+Complexidade:
 
-    Contagem e média: O(n)
+Contagem e média: O(n)
 
-    Agrupamento SQL: O(n) (ou O(log n) com índices)
+Agrupamento SQL: O(n) (ou O(log n) com índices)
 
-    Esses cálculos são apresentados de forma visual na rota /stats, utilizando Chart.js para exibir gráficos interativos.
+Esses cálculos são apresentados de forma visual na rota /stats, utilizando Chart.js para exibir gráficos interativos.
 
-     Equação de Recorrência (QuickSort)
+ Equação de Recorrência (QuickSort)
 
-    Para o caso médio:
+Para o caso médio:
 
-    T(n) = 2T(n/2) + Θ(n)
+T(n) = 2T(n/2) + Θ(n)
 
 
-    Aplicando o Teorema Mestre:
+Aplicando o Teorema Mestre:
 
-    T(n) = Θ(n log n)
+T(n) = Θ(n log n)
 
-     Tabela de Complexidades Gerais
-    Operação	Estrutura	Algoritmo	Complexidade
-    Criar tarefa	Banco/Lista	Inserção	O(1)
-    Listar tarefas	Lista	Iteração	O(n)
-    Editar tarefa	Banco	Busca + Update	O(n)
-    Excluir tarefa	Banco	Busca + Delete	O(n)
-    Ordenar tarefas	Lista	QuickSort	O(n log n)
-    Calcular estatísticas	Lista	Agregação	O(n)
-    Agrupar por data	SQL	GROUP BY	O(n)
-     Visualização e Interpretação dos Dados
+ Tabela de Complexidades Gerais
+Operação	Estrutura	Algoritmo	Complexidade
+Criar tarefa	Banco/Lista	Inserção	O(1)
+Listar tarefas	Lista	Iteração	O(n)
+Editar tarefa	Banco	Busca + Update	O(n)
+Excluir tarefa	Banco	Busca + Delete	O(n)
+Ordenar tarefas	Lista	QuickSort	O(n log n)
+Calcular estatísticas	Lista	Agregação	O(n)
+Agrupar por data	SQL	GROUP BY	O(n)
+ Visualização e Interpretação dos Dados
 
-    Na rota /stats, os dados são processados e exibidos de forma visual:
+Na rota /stats, os dados são processados e exibidos de forma visual:
 
-    Tabela de métricas gerais
+Tabela de métricas gerais
 
-    Gráfico de barras (Chart.js) mostrando o número de tarefas criadas por dia
+Gráfico de barras (Chart.js) mostrando o número de tarefas criadas por dia
 
-    Isso demonstra a aplicação de agregações, visualização de dados e análise estatística — pontos exigidos pelo roteiro da disciplina.
+Isso demonstra a aplicação de agregações, visualização de dados e análise estatística — pontos exigidos pelo roteiro da disciplina.
 
-    Conclusão
+Conclusão
 
-    O projeto TaskManagerPy integra teoria e prática de forma eficiente, demonstrando:
+O projeto TaskManagerPy integra teoria e prática de forma eficiente, demonstrando:
 
-    Aplicação de algoritmos clássicos (QuickSort, busca linear);
+Aplicação de algoritmos clássicos (QuickSort, busca linear);
 
-    Uso de estruturas de dados fundamentais (listas, dicionários);
+Uso de estruturas de dados fundamentais (listas, dicionários);
 
-    Cálculos estatísticos e análise de complexidade;
+Cálculos estatísticos e análise de complexidade;
 
-    Integração com tecnologias web (Flask, SQLite, Chart.js);
+Integração com tecnologias web (Flask, SQLite, Chart.js);
 
-    Implantação em ambiente real (Railway).
+Implantação em ambiente real (Railway).
 
     
