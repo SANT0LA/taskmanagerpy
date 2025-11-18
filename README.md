@@ -1,11 +1,11 @@
-# ✅ TaskManagerPy  
+# TaskManager  
 **Gerenciador de Tarefas Web desenvolvido em Python (Flask)**  
 
 ---
 
-## 🧩 Sobre o Projeto
+## Sobre o Projeto
 
-O **TaskManagerPy** é uma aplicação web desenvolvida em **Python** com o framework **Flask**, criada para **gerenciar tarefas pessoais**.  
+O **TaskManager** é uma aplicação web desenvolvida em **Python** com o framework **Flask**, criada para **gerenciar tarefas pessoais**.  
 O sistema permite **criar, listar, editar e excluir tarefas**, além de **analisar estatísticas** e **gerar gráficos** sobre o progresso do usuário.
 
 Este projeto foi desenvolvido como parte da disciplina **Algoritmos e Complexidades em Aplicações Web/Mobile**, aplicando conceitos de:
@@ -16,7 +16,7 @@ Este projeto foi desenvolvido como parte da disciplina **Algoritmos e Complexida
 
 ---
 
-## ⚙️ Funcionalidades Principais
+## Funcionalidades Principais
 
 | Função | Descrição |
 |---------|------------|
@@ -132,13 +132,3 @@ taskmanagerpy/
     ├── index.html
     ├── edit.html
     └── stats.html
-
-## 🧾 Licença
-
-Este projeto foi desenvolvido com fins acadêmicos por João Victor Santos
-para a disciplina Algoritmos e Complexidades(2025).
-Uso livre para fins educacionais.
-
-## 👨‍💻 Autor
-João Victor Santos
-🔗 GitHub - SANT0LA
