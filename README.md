@@ -30,7 +30,7 @@ Este projeto foi desenvolvido como parte da disciplina **Algoritmos e Complexida
 
 ---
 
-## 🧠 Algoritmos e Estruturas
+##  Algoritmos e Estruturas
 
 O projeto implementa e analisa:
 
@@ -46,7 +46,7 @@ Mais detalhes sobre a análise teórica estão disponíveis no arquivo [`analysi
 
 ---
 
-## 🧱 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Python 3.12+**
 - **Flask** — framework web principal  
@@ -58,7 +58,7 @@ Mais detalhes sobre a análise teórica estão disponíveis no arquivo [`analysi
 
 ---
 
-## 🚀 Deploy Online
+## Deploy Online
 
 A aplicação está hospedada na **Railway** e pode ser acessada em:
 
@@ -88,21 +88,8 @@ Acesse no navegador:
 👉 http://127.0.0.1:5000/
 
 ```
-## 📊 Estatísticas e Visualização
 
-A página /stats exibe indicadores em tempo real, incluindo:
-
-Total de tarefas criadas
-
-Percentual de tarefas concluídas
-
-Média de prioridade (1–3)
-
-Gráfico interativo de tarefas criadas por dia
-
-Implementação feita com SQLAlchemy + Chart.js, demonstrando técnicas de agregação de dados e visualização estatística.
-
-## 🧮 Análise de Algoritmos e Complexidade
+##  Análise de Algoritmos e Complexidade
 
 O documento analysis.md
  apresenta:
@@ -117,7 +104,7 @@ Equação de recorrência do QuickSort
 
 Tabela comparativa das operações CRUD
 
-## 📂 Estrutura do Projeto
+##  Estrutura do Projeto
 taskmanagerpy/
 │
 ├── app.py                 # Arquivo principal Flask
