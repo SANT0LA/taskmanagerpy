@@ -1,22 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 <form action="" method="post">
-  <div class="mb-3"><input name="title" class="form-control" value="{{ task.title }}" required></div>
-  <div class="mb-3"><textarea name="description" class="form-control">{{ task.description }}</textarea></div>
   <div class="mb-3">
+    <input name="title" class="form-control" value="{{ task.title }}" required>
+  </div>
+
+  <div class="mb-3">
+    <textarea name="description" class="form-control">{{ task.description }}</textarea>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Prioridade</label>
     <select name="priority" class="form-select">
-      <option value="low" {% if task.priority=='low' %}selected{% endif %}>Low</option>
-      <option value="medium" {% if task.priority=='medium' %}selected{% endif %}>Medium</option>
-      <option value="high" {% if task.priority=='high' %}selected{% endif %}>High</option>
+      <option value="Baixa" {% if task.priority=='Baixa' %}selected{% endif %}>Baixa</option>
+      <option value="Média" {% if task.priority=='Média' %}selected{% endif %}>Média</option>
+      <option value="Alta" {% if task.priority=='Alta' %}selected{% endif %}>Alta</option>
     </select>
   </div>
+
   <div class="mb-3">
+    <label class="form-label">Status</label>
     <select name="status" class="form-select">
-      <option value="pending" {% if task.status=='pending' %}selected{% endif %}>Pending</option>
-      <option value="doing" {% if task.status=='doing' %}selected{% endif %}>Doing</option>
-      <option value="done" {% if task.status=='done' %}selected{% endif %}>Done</option>
+      <option value="Pendente" {% if task.status=='Pendente' %}selected{% endif %}>Pendente</option>
+      <option value="Fazendo" {% if task.status=='Fazendo' %}selected{% endif %}>Fazendo</option>
+      <option value="Concluída" {% if task.status=='Concluída' %}selected{% endif %}>Concluída</option>
     </select>
   </div>
+
   <button class="btn btn-primary">Salvar</button>
   <a class="btn btn-secondary" href="{{ url_for('index') }}">Cancelar</a>
 </form>
